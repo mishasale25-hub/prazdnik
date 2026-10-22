@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>КОРАЛЛ — ведущий на любой праздник</title>
-<meta name="description" content="Ведущий на свадьбу, день рождения, корпоратив и юбилей. Живой зал, свой сценарий, ноль неловких пауз." />
+<title>Михаил Чернов — ведущий на любой праздник</title>
+<meta name="description" content="Михаил Чернов — ведущий на свадьбу, день рождения, корпоратив и юбилей. Живой зал, свой сценарий, ноль неловких пауз." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet" />
@@ -341,7 +341,7 @@
   </div>
   <header>
     <div class="wrap nav">
-      <a class="logo" href="#top"><i>К</i> КОРАЛЛ</a>
+      <a class="logo" href="#top"><i>МЧ</i> Михаил Чернов</a>
       <nav class="nav-links" id="navLinks">
         <a href="#show">Как это выглядит</a>
         <a href="#formats">Форматы</a>
@@ -428,23 +428,17 @@
       <div class="wrap" id="gallery">
         <div class="eyebrow">С мероприятий</div>
         <h2>Так это выглядит, когда зал уже ваш</h2>
-        <div class="toolbar">
-          <p class="sub" style="margin:0">Живые кадры, не постановочный «ведущий смотрит в объектив у белой стены».</p>
-          <div style="display:flex; gap:8px; flex-wrap:wrap">
-            <button class="btn btn-primary" type="button" id="addPhotoBtn">+ Вставить фото</button>
-            <button class="btn btn-ghost" type="button" id="addPhotoUrlBtn">Вставить по ссылке</button>
-          </div>
-        </div>
+        <p class="sub" style="margin:0 0 14px">Живые кадры, не постановочный «ведущий смотрит в объектив у белой стены».</p>
         <div class="gallery" id="galleryGrid"></div>
-        <input id="photoInput" type="file" accept="image/*" multiple hidden />
+        
       </div>
     </section>
 
     <section id="videos" style="padding-top:20px">
       <div class="wrap">
         <div class="eyebrow">Видео</div>
-        <h2>Нажмите и вставьте ролик с праздника</h2>
-        <p class="sub">YouTube, Rutube, VK Видео или файл с телефона. Ссылки сохраняются в этом браузере — гости увидят их, если откроют эту же страницу после вашего сохранения. Для публикации в интернет впишите ссылки в блок CONFIG внизу файла.</p>
+        <h2>Посмотрите видео которые передадут манеру моего ведения</h2>
+        <p class="sub">Видео в котором не только музыка, а настоящая речь и движение</p>
         <div class="video-grid" id="videoGrid"></div>
       </div>
     </section>
@@ -452,7 +446,7 @@
     <section id="offer">
       <div class="wrap">
         <div class="eyebrow">Выгодное предложение</div>
-        <h2>Заберите дату, пока её не забрал чужой торт</h2>
+        <h2>Забронируйте дату, пока цена не взлетела как курс доллара</h2>
         <p class="sub" id="offerText">Бронь в этом месяце: персональный сценарий в подарок, созвон по таймингу бесплатно и плейлист под ваш зал. Без «а потом ещё доплатите за конкурсы».</p>
         <div class="prices" id="prices"></div>
       </div>
@@ -484,12 +478,12 @@
           <p>Можно. Конкурс — инструмент, не обязанность. Иногда лучший конкурс — это хороший тост и правильная песня.</p>
         </details>
         <details>
-          <summary>Работаете с нашим диджеем и площадкой?</summary>
-          <p>Да. Свожу тайминг с кухней, светом и музыкой. Если команды нет — подскажу, кого звать.</p>
+          <summary>Работаете вы один или с диджеем?</summary>
+          <p>Работаю с профессиональным диджеем который заставит танцевать даже трезвого гостя</p>
         </details>
         <details>
-          <summary>Что если дата уже почти занята?</summary>
-          <p>Напишите всё равно. Иногда держат предварительную бронь, и вечер ещё можно забрать.</p>
+          <summary>Работаете ли вы по договору</summary>
+          <p>Да, составляется типовой договор и праздник под защитой</p>
         </details>
       </div>
     </section>
@@ -500,7 +494,7 @@
           <div class="contact-side">
             <div class="eyebrow" style="color:#ffd0c8">Бронь</div>
             <h2>Напишите дату — скажу честно, свободен ли</h2>
-            <p>Город: <b id="cityLabel">уточним</b><br>Телефон: <b id="phoneLabel">добавьте в настройках</b></p>
+            <p>Город: <b id="cityLabel">выезд по городу и области</b><br>Телефон: <b id="phoneLabel">+79771980070</b></p>
           </div>
           <form id="bookForm">
             <div class="form-row">
@@ -521,10 +515,10 @@
             </div>
             <label>Коротко о вечере<textarea name="about" placeholder="Гостей примерно, город, что точно нельзя шутить"></textarea></label>
             <button class="btn btn-primary" type="submit">Отправить в WhatsApp</button>
-            <p class="hint">Кнопка откроет WhatsApp с готовым текстом. Телеграм — рядом, если так удобнее.</p>
+            
             <div style="display:flex; gap:8px; flex-wrap:wrap">
-              <a class="btn btn-dark" id="tgLink" href="#" target="_blank" rel="noopener">Telegram</a>
-              <a class="btn btn-ghost" id="callLink" href="#">Позвонить</a>
+              <a class="btn btn-dark" id="tgLink" href="https://t.me/+79771980070" target="_blank" rel="noopener">Telegram</a>
+              <a class="btn btn-ghost" id="callLink" href="https://t.me/+79771980070" target="_blank" rel="noopener">Telegram</a>
             </div>
           </form>
         </div>
@@ -534,8 +528,8 @@
 
   <footer>
     <div class="wrap foot">
-      <div><b id="footName">КОРАЛЛ</b> — ведущий на любой праздник</div>
-      <div>Фото с реальных вечеров. Контакты и цены меняются кнопкой «Править сайт».</div>
+      <div><b id="footName">Михаил Чернов</b> — ведущий на любой праздник</div>
+      
     </div>
   </footer>
 
@@ -543,7 +537,7 @@
     <a class="btn btn-primary" href="#book">Забронировать</a>
     <a class="btn btn-ghost" href="#videos">Видео</a>
   </div>
-  <button class="btn btn-gold owner" type="button" id="ownerBtn">Править сайт</button>
+  
   <div class="toast" id="toast"></div>
 
   <div class="modal" id="videoModal">
@@ -584,10 +578,10 @@
 
 <script>
 const CONFIG = {
-  name: "Ведущий",
+  name: "Михаил Чернов",
   city: "выезд по городу и области",
-  phone: "79000000000",
-  telegram: "username",
+  phone: "79771980070",
+  telegram: "79771980070",
   offer: "Бронь в этом месяце: персональный сценарий в подарок, созвон по таймингу бесплатно и плейлист под ваш зал. Без доплат «за конкурсы».",
   prices: [
     { name: "Искра", sum: "от 35 000 ₽", points: ["до 4 часов", "сценарий вечера", "координация тостов", "1 созвон"], hot: false },
@@ -631,16 +625,16 @@ function toast(text) {
 }
 
 function applyProfile() {
-  const p = state.profile;
+  const p = CONFIG; // fixed profile, no self-edit
   document.getElementById("cityLabel").textContent = p.city || "уточним";
-  document.getElementById("phoneLabel").textContent = p.phone ? "+" + String(p.phone).replace(/\D/g, "") : "добавьте в настройках";
-  document.getElementById("footName").textContent = p.name || "КОРАЛЛ";
-  document.getElementById("stampName").textContent = p.name && p.name !== "Ведущий" ? p.name : "Коралловый костюм";
+  document.getElementById("phoneLabel").textContent = "+79771980070";
+  document.getElementById("footName").textContent = "Михаил Чернов";
+  document.getElementById("stampName").textContent = "Михаил Чернов";
   document.getElementById("offerText").textContent = p.offer || CONFIG.offer;
   document.getElementById("navPhone").textContent = "Написать";
   const phone = String(p.phone || "").replace(/\D/g, "");
-  document.getElementById("callLink").href = phone ? "tel:+" + phone : "#owner";
-  document.getElementById("tgLink").href = p.telegram ? "https://t.me/" + p.telegram.replace("@", "") : "#";
+  document.getElementById("callLink").href = "https://t.me/+79771980070";
+  document.getElementById("tgLink").href = "https://t.me/+79771980070";
   document.getElementById("prices").innerHTML = (p.prices || CONFIG.prices).map(item => `
     <article class="price ${item.hot ? "hit" : ""}">
       ${item.hot ? '<div class="tag">берут чаще</div>' : ""}
@@ -648,7 +642,7 @@ function applyProfile() {
       <h3>${item.name}</h3>
       <div class="sum">${item.sum}</div>
       <ul>${item.points.map(x => `<li>${x}</li>`).join("")}</ul>
-      <a class="btn ${item.hot ? "btn-gold" : "btn-primary"}" href="#book">Хочу этот формат</a>
+      <a class="btn ${item.hot ? "btn-gold" : "btn-primary"}" href="#book">Узнать подробнее о формате</a>
     </article>`).join("");
 }
 
@@ -658,10 +652,8 @@ function renderGallery() {
     <button class="shot" type="button" data-i="${i}">
       <img src="${photo.src}" alt="${photo.caption || "Фото с праздника"}" />
       <figcaption>${photo.caption || "С праздника"}</figcaption>
-    </button>`).join("") + `
-    <button class="add-tile" type="button" id="addTile">+ фото с праздника</button>`;
+    </button>`).join("");
   grid.querySelectorAll(".shot").forEach(btn => btn.onclick = () => openLight(state.photos[+btn.dataset.i].src));
-  document.getElementById("addTile").onclick = () => document.getElementById("photoInput").click();
 }
 
 function videoEmbed(url) {
@@ -690,11 +682,9 @@ function renderVideos() {
       <div class="video-frame">${v.url ? videoEmbed(v.url) : "<div>Сюда встанет ролик</div>"}</div>
       <div class="body">
         <h3>${v.title || "Видео с праздника"}</h3>
-        <p class="hint">${v.url ? "Можно заменить другой ссылкой" : "YouTube, Rutube, VK или файл"}</p>
-        <button class="btn btn-primary" type="button" data-v="${i}">Вставить видео</button>
+        <a class="btn btn-primary" href="${v.url || '#'}" target="_blank" rel="noopener">Смотреть видео</a>
       </div>
     </article>`).join("");
-  document.querySelectorAll("[data-v]").forEach(btn => btn.onclick = () => openVideo(+btn.dataset.v));
 }
 
 function openLight(src) {
@@ -713,87 +703,24 @@ document.getElementById("marquee").innerHTML = Array.from({length: 2}, () =>
 ).join("");
 
 document.getElementById("menuBtn").onclick = () => document.getElementById("navLinks").classList.toggle("open");
-document.getElementById("addPhotoBtn").onclick = () => document.getElementById("photoInput").click();
-document.getElementById("photoInput").onchange = (e) => {
-  [...e.target.files].forEach(file => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      state.photos.push({ src: reader.result, caption: file.name.replace(/\.[^.]+$/, "") });
-      save("photos", state.photos);
-      renderGallery();
-      toast("Фото вставлено");
-    };
-    reader.readAsDataURL(file);
-  });
-  e.target.value = "";
-};
-document.getElementById("addPhotoUrlBtn").onclick = () => {
-  const src = prompt("Ссылка на фото");
-  if (!src) return;
-  const caption = prompt("Подпись", "С праздника") || "С праздника";
-  state.photos.push({ src, caption });
-  save("photos", state.photos);
-  renderGallery();
-};
-document.getElementById("saveVideo").onclick = () => {
-  const url = document.getElementById("videoUrl").value.trim();
-  const title = document.getElementById("videoTitle").value.trim() || "Видео с праздника";
-  if (!url) return toast("Вставьте ссылку или выберите файл");
-  state.videos[state.videoIndex] = { title, url };
-  save("videos", state.videos);
-  renderVideos();
-  document.getElementById("videoModal").classList.remove("open");
-  toast("Видео вставлено");
-};
-document.getElementById("videoFileBtn").onclick = () => document.getElementById("videoFile").click();
-document.getElementById("videoFile").onchange = (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const url = URL.createObjectURL(file);
-  state.videos[state.videoIndex] = {
-    title: document.getElementById("videoTitle").value.trim() || file.name,
-    url
-  };
-  save("videos", state.videos.filter(v => !String(v.url).startsWith("blob:")));
-  renderVideos();
-  document.getElementById("videoModal").classList.remove("open");
-  toast("Видео с устройства вставлено до обновления страницы");
-};
-document.getElementById("closeVideo").onclick = () => document.getElementById("videoModal").classList.remove("open");
+
+
+
+
+
 document.getElementById("closeLight").onclick = () => document.getElementById("lightbox").classList.remove("open");
 document.getElementById("lightbox").onclick = (e) => { if (e.target.id === "lightbox") e.currentTarget.classList.remove("open"); };
 
-document.getElementById("ownerBtn").onclick = () => {
-  document.getElementById("setName").value = state.profile.name || "";
-  document.getElementById("setCity").value = state.profile.city || "";
-  document.getElementById("setPhone").value = state.profile.phone || "";
-  document.getElementById("setTg").value = state.profile.telegram || "";
-  document.getElementById("setOffer").value = state.profile.offer || "";
-  document.getElementById("ownerModal").classList.add("open");
-};
-document.getElementById("closeOwner").onclick = () => document.getElementById("ownerModal").classList.remove("open");
-document.getElementById("saveOwner").onclick = () => {
-  state.profile.name = document.getElementById("setName").value.trim() || "Ведущий";
-  state.profile.city = document.getElementById("setCity").value.trim();
-  state.profile.phone = document.getElementById("setPhone").value.replace(/\D/g, "");
-  state.profile.telegram = document.getElementById("setTg").value.trim().replace("@", "");
-  state.profile.offer = document.getElementById("setOffer").value.trim();
-  save("profile", state.profile);
-  applyProfile();
-  document.getElementById("ownerModal").classList.remove("open");
-  toast("Сохранено");
-};
+
+
+
 
 document.getElementById("bookForm").onsubmit = (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target).entries());
-  const phone = String(state.profile.phone || "").replace(/\D/g, "");
+  const phone = "79771980070";
   const text = `Здравствуйте! Хочу забронировать ведущего.%0AИмя: ${data.name}%0AТелефон: ${data.phone}%0AПовод: ${data.type}%0AДата: ${data.date || "уточню"}%0A${data.about || ""}`;
-  if (!phone || phone === "79000000000") {
-    toast("Сначала укажите свой номер в «Править сайт»");
-    document.getElementById("ownerBtn").click();
-    return;
-  }
+  
   window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
 };
 
