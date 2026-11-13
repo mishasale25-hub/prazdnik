@@ -54,7 +54,7 @@ function applyProfile() {
   document.getElementById("offerText").textContent = p.offer || CONFIG.offer;
   document.getElementById("navPhone").textContent = "Написать";
   const phone = String(p.phone || "").replace(/\D/g, "");
-  document.getElementById("callLink").href = "https://t.me/+79771980070";
+  document.getElementById("callLink").href = "https://max.ru/u/f9LHodD0cOIWPO0-qeNdngwkocaQTjIobAiMX3L3X_z4L5yJX_XfSq9CWGA";
   document.getElementById("tgLink").href = "https://t.me/+79771980070";
   document.getElementById("prices").innerHTML = (p.prices || CONFIG.prices).map(item => `
     <article class="price ${item.hot ? "hit" : ""}">
@@ -87,32 +87,57 @@ function videoEmbed(url) {
     else if (u.hostname.includes("youtube.com")) src = "https://www.youtube.com/embed/" + (u.searchParams.get("v") || "");
     else if (u.hostname.includes("rutube.ru")) {
       const id = u.pathname.split("/").filter(Boolean).pop();
-      src = "https://rutube.ru/play/embed/" + id + "?autoplay=0";
+      src = "https://rutube.ru/play/embed/" + id + "?autoplay=1";
     } else if (u.hostname.includes("vk.com") || u.hostname.includes("vkvideo")) src = url;
   } catch (e) { return ""; }
   if (!src) return "";
   if (src === url && (url.includes("vk.com") || url.includes("vkvideo"))) {
     return `<a class="btn btn-gold" href="${url}" target="_blank" rel="noopener">Открыть видео VK</a>`;
   }
-  return `<iframe 
-    src="${src}" 
-	autostartmute=false 
-	autoplay=false 
-    allow="encrypted-media; picture-in-picture; fullscreen; autoplay;" 
-    allowfullscreen 
-    loading="lazy"
-  ></iframe>`;
+  return `<iframe src="${src}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
 }
 
 function renderVideos() {
-  document.getElementById("videoGrid").innerHTML = state.videos.map((v, i) => `
-    <article class="video-card">
-      <div class="video-frame">${v.url ? videoEmbed(v.url) : "<div></div>"}</div>
-      <div class="body">
-        <h3>${v.title || "Видео с праздника"}</h3>
-        <a class="btn btn-primary" href="${v.url || '#'}" target="_blank" rel="noopener">Смотреть видео</a>
-      </div>
-    </article>`).join("");
+  const grid = document.getElementById("videoGrid");
+  grid.innerHTML = state.videos.map((v, i) => {
+    if (!v.url) {
+      return `
+        <article class="video-card">
+          <div class="video-frame" style="background:#1a1020"></div>
+          <div class="body">
+            <h3>${v.title || "Видео с праздника"}</h3>
+          </div>
+        </article>`;
+    }
+
+    return `
+      <article class="video-card">
+        <div class="video-frame" data-index="${i}">
+          <button class="play-btn" type="button" aria-label="Смотреть видео">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span>Смотреть</span>
+          </button>
+        </div>
+        <div class="body">
+          <h3>${v.title || "Видео с праздника"}</h3>
+          <a class="btn btn-primary" href="${v.url}" target="_blank" rel="noopener">Открыть на Rutube</a>
+        </div>
+      </article>`;
+  }).join("");
+
+  // Обработчики клика по кнопке Play
+  grid.querySelectorAll(".play-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const frame = this.closest(".video-frame");
+      const index = +frame.dataset.index;
+      const video = state.videos[index];
+      if (!video || !video.url) return;
+
+      frame.innerHTML = videoEmbed(video.url);
+    });
+  });
 }
 
 function openLight(src) {

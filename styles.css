@@ -321,3 +321,38 @@
     .owner { bottom: 74px; }
     .nav-cta { display: none; }
   }
+  
+  .video-frame {
+  position: relative;
+  background: #1a1020;
+  display: grid;
+  place-items: center;
+}
+
+.play-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  border-radius: 20px;
+  padding: 18px 22px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.play-btn:hover {
+  background: rgba(255, 93, 108, 0.85);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.play-btn svg {
+  width: 32px;
+  height: 32px;
+}
